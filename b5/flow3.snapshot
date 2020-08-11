@@ -1,0 +1,369 @@
+{
+  "header" : {
+    "dataModelVersion" : "3"
+  },
+  "content" : {
+    "flowSnapshot" : {
+      "flowContents" : {
+        "comments" : "",
+        "componentType" : "PROCESS_GROUP",
+        "connections" : [ {
+          "backPressureDataSizeThreshold" : "0 MB",
+          "backPressureObjectThreshold" : 0,
+          "bends" : [ ],
+          "componentType" : "CONNECTION",
+          "destination" : {
+            "comments" : "",
+            "groupId" : "df6af272-a594-312d-9d8b-f3bc6504ba3c",
+            "id" : "fa62124b-d113-37ca-bcc2-1bd1fb1f33bd",
+            "name" : "Store the data into HBase table",
+            "type" : "PROCESSOR"
+          },
+          "flowFileExpiration" : "0 sec",
+          "groupIdentifier" : "df6af272-a594-312d-9d8b-f3bc6504ba3c",
+          "identifier" : "52f40c46-bde3-3fb2-8416-ec4db1911889",
+          "labelIndex" : 1,
+          "loadBalanceCompression" : "DO_NOT_COMPRESS",
+          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+          "name" : "",
+          "prioritizers" : [ ],
+          "selectedRelationships" : [ "split" ],
+          "source" : {
+            "comments" : "",
+            "groupId" : "df6af272-a594-312d-9d8b-f3bc6504ba3c",
+            "id" : "0cdcb071-d5e4-3389-9023-272250c99d1a",
+            "name" : "Splits the json data.",
+            "type" : "PROCESSOR"
+          },
+          "zIndex" : 0
+        }, {
+          "backPressureDataSizeThreshold" : "0 MB",
+          "backPressureObjectThreshold" : 0,
+          "bends" : [ ],
+          "componentType" : "CONNECTION",
+          "destination" : {
+            "comments" : "",
+            "groupId" : "df6af272-a594-312d-9d8b-f3bc6504ba3c",
+            "id" : "0cdcb071-d5e4-3389-9023-272250c99d1a",
+            "name" : "Splits the json data.",
+            "type" : "PROCESSOR"
+          },
+          "flowFileExpiration" : "0 sec",
+          "groupIdentifier" : "df6af272-a594-312d-9d8b-f3bc6504ba3c",
+          "identifier" : "ce6572c7-e438-3f3f-afbe-19f10e3fab34",
+          "labelIndex" : 1,
+          "loadBalanceCompression" : "DO_NOT_COMPRESS",
+          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+          "name" : "",
+          "prioritizers" : [ ],
+          "selectedRelationships" : [ "success" ],
+          "source" : {
+            "comments" : "",
+            "groupId" : "df6af272-a594-312d-9d8b-f3bc6504ba3c",
+            "id" : "85962a44-b66b-3aa1-8813-dbba7cfc21b4",
+            "name" : "Read input json file.",
+            "type" : "PROCESSOR"
+          },
+          "zIndex" : 0
+        } ],
+        "controllerServices" : [ ],
+        "funnels" : [ ],
+        "identifier" : "df6af272-a594-312d-9d8b-f3bc6504ba3c",
+        "inputPorts" : [ ],
+        "labels" : [ {
+          "componentType" : "LABEL",
+          "groupIdentifier" : "df6af272-a594-312d-9d8b-f3bc6504ba3c",
+          "height" : 77.0,
+          "identifier" : "1a8e542b-4f38-3f51-bba0-aae70cd762b6",
+          "label" : "To execute the sample, ensure to complete the below steps:\n1. Create table with tablename 'ContactDetails' into HBase. To create table run the below command in HBase:\n\n../hbase> create 'ContactDetails','Customers'\n2. In 'PutHBaseJSON' processor, Create new service under the property 'HBase Client Service' and set the hadoop configuration xml location to \"Hadoop Configuration Files\" as below:\n\nDriveHadoopetchadoopcore-site.xml, DriveHadoopetchadoophdfs-site.xml, DriveHBaseconfhbase-site.xml\n\n",
+          "position" : {
+            "x" : 958.0,
+            "y" : 513.7913861083985
+          },
+          "style" : {
+            "background-color" : "#ffffff",
+            "font-size" : "12px"
+          },
+          "width" : 1050.0
+        }, {
+          "componentType" : "LABEL",
+          "groupIdentifier" : "df6af272-a594-312d-9d8b-f3bc6504ba3c",
+          "height" : 24.0,
+          "identifier" : "93f8519c-bb30-3da3-bb1e-5dc0ddd1e189",
+          "label" : "This sample demonstrates the use of processor to move json values into HBase table.",
+          "position" : {
+            "x" : 1179.3713989257812,
+            "y" : 469.0
+          },
+          "style" : {
+            "background-color" : "#ffffff",
+            "font-size" : "14px"
+          },
+          "width" : 602.0
+        } ],
+        "name" : "Data Flow_1",
+        "outputPorts" : [ ],
+        "position" : {
+          "x" : 958.0,
+          "y" : 469.0
+        },
+        "processGroups" : [ ],
+        "processors" : [ {
+          "autoTerminatedRelationships" : [ ],
+          "bulletinLevel" : "WARN",
+          "bundle" : {
+            "artifact" : "nifi-standard-nar",
+            "group" : "org.apache.nifi",
+            "version" : "1.9.2"
+          },
+          "comments" : "",
+          "componentType" : "PROCESSOR",
+          "concurrentlySchedulableTaskCount" : 1,
+          "executionNode" : "ALL",
+          "groupIdentifier" : "df6af272-a594-312d-9d8b-f3bc6504ba3c",
+          "identifier" : "85962a44-b66b-3aa1-8813-dbba7cfc21b4",
+          "name" : "Read input json file.",
+          "penaltyDuration" : "30 sec",
+          "position" : {
+            "x" : 961.4308293921713,
+            "y" : 606.4782592773438
+          },
+          "properties" : {
+            "Keep Source File" : "true",
+            "Minimum File Age" : "0 sec",
+            "Polling Interval" : "0 sec",
+            "Input Directory" : "../../Samples/Data/ContactDetails",
+            "Batch Size" : "10",
+            "Minimum File Size" : "0 B",
+            "Ignore Hidden Files" : "true",
+            "Recurse Subdirectories" : "true",
+            "File Filter" : "Customers.json"
+          },
+          "propertyDescriptors" : {
+            "Keep Source File" : {
+              "displayName" : "Keep Source File",
+              "identifiesControllerService" : false,
+              "name" : "Keep Source File",
+              "sensitive" : false
+            },
+            "Minimum File Age" : {
+              "displayName" : "Minimum File Age",
+              "identifiesControllerService" : false,
+              "name" : "Minimum File Age",
+              "sensitive" : false
+            },
+            "Polling Interval" : {
+              "displayName" : "Polling Interval",
+              "identifiesControllerService" : false,
+              "name" : "Polling Interval",
+              "sensitive" : false
+            },
+            "Input Directory" : {
+              "displayName" : "Input Directory",
+              "identifiesControllerService" : false,
+              "name" : "Input Directory",
+              "sensitive" : false
+            },
+            "Maximum File Age" : {
+              "displayName" : "Maximum File Age",
+              "identifiesControllerService" : false,
+              "name" : "Maximum File Age",
+              "sensitive" : false
+            },
+            "Batch Size" : {
+              "displayName" : "Batch Size",
+              "identifiesControllerService" : false,
+              "name" : "Batch Size",
+              "sensitive" : false
+            },
+            "Maximum File Size" : {
+              "displayName" : "Maximum File Size",
+              "identifiesControllerService" : false,
+              "name" : "Maximum File Size",
+              "sensitive" : false
+            },
+            "Minimum File Size" : {
+              "displayName" : "Minimum File Size",
+              "identifiesControllerService" : false,
+              "name" : "Minimum File Size",
+              "sensitive" : false
+            },
+            "Ignore Hidden Files" : {
+              "displayName" : "Ignore Hidden Files",
+              "identifiesControllerService" : false,
+              "name" : "Ignore Hidden Files",
+              "sensitive" : false
+            },
+            "Recurse Subdirectories" : {
+              "displayName" : "Recurse Subdirectories",
+              "identifiesControllerService" : false,
+              "name" : "Recurse Subdirectories",
+              "sensitive" : false
+            },
+            "File Filter" : {
+              "displayName" : "File Filter",
+              "identifiesControllerService" : false,
+              "name" : "File Filter",
+              "sensitive" : false
+            },
+            "Path Filter" : {
+              "displayName" : "Path Filter",
+              "identifiesControllerService" : false,
+              "name" : "Path Filter",
+              "sensitive" : false
+            }
+          },
+          "runDurationMillis" : 0,
+          "schedulingPeriod" : "1 day",
+          "schedulingStrategy" : "TIMER_DRIVEN",
+          "style" : { },
+          "type" : "org.apache.nifi.processors.standard.GetFile",
+          "yieldDuration" : "1 sec"
+        }, {
+          "autoTerminatedRelationships" : [ "success", "failure" ],
+          "bulletinLevel" : "WARN",
+          "bundle" : {
+            "artifact" : "nifi-hbase-nar",
+            "group" : "org.apache.nifi",
+            "version" : "1.9.2"
+          },
+          "comments" : "",
+          "componentType" : "PROCESSOR",
+          "concurrentlySchedulableTaskCount" : 1,
+          "executionNode" : "ALL",
+          "groupIdentifier" : "df6af272-a594-312d-9d8b-f3bc6504ba3c",
+          "identifier" : "fa62124b-d113-37ca-bcc2-1bd1fb1f33bd",
+          "name" : "Store the data into HBase table",
+          "penaltyDuration" : "30 sec",
+          "position" : {
+            "x" : 1782.8217163085938,
+            "y" : 598.1538269042969
+          },
+          "properties" : {
+            "Table Name" : "ContactDetails",
+            "Row Identifier Encoding Strategy" : "String",
+            "Row Identifier Field Name" : "CUSTOMERID",
+            "Complex Field Strategy" : "Text",
+            "Batch Size" : "25",
+            "Column Family" : "Customers",
+            "Field Encoding Strategy" : "String"
+          },
+          "propertyDescriptors" : {
+            "Row Identifier" : {
+              "displayName" : "Row Identifier",
+              "identifiesControllerService" : false,
+              "name" : "Row Identifier",
+              "sensitive" : false
+            },
+            "Table Name" : {
+              "displayName" : "Table Name",
+              "identifiesControllerService" : false,
+              "name" : "Table Name",
+              "sensitive" : false
+            },
+            "Row Identifier Encoding Strategy" : {
+              "displayName" : "Row Identifier Encoding Strategy",
+              "identifiesControllerService" : false,
+              "name" : "Row Identifier Encoding Strategy",
+              "sensitive" : false
+            },
+            "Row Identifier Field Name" : {
+              "displayName" : "Row Identifier Field Name",
+              "identifiesControllerService" : false,
+              "name" : "Row Identifier Field Name",
+              "sensitive" : false
+            },
+            "Complex Field Strategy" : {
+              "displayName" : "Complex Field Strategy",
+              "identifiesControllerService" : false,
+              "name" : "Complex Field Strategy",
+              "sensitive" : false
+            },
+            "Batch Size" : {
+              "displayName" : "Batch Size",
+              "identifiesControllerService" : false,
+              "name" : "Batch Size",
+              "sensitive" : false
+            },
+            "Column Family" : {
+              "displayName" : "Column Family",
+              "identifiesControllerService" : false,
+              "name" : "Column Family",
+              "sensitive" : false
+            },
+            "Field Encoding Strategy" : {
+              "displayName" : "Field Encoding Strategy",
+              "identifiesControllerService" : false,
+              "name" : "Field Encoding Strategy",
+              "sensitive" : false
+            },
+            "HBase Client Service" : {
+              "displayName" : "HBase Client Service",
+              "identifiesControllerService" : true,
+              "name" : "HBase Client Service",
+              "sensitive" : false
+            },
+            "timestamp" : {
+              "displayName" : "Timestamp",
+              "identifiesControllerService" : false,
+              "name" : "timestamp",
+              "sensitive" : false
+            }
+          },
+          "runDurationMillis" : 0,
+          "schedulingPeriod" : "1 sec",
+          "schedulingStrategy" : "TIMER_DRIVEN",
+          "style" : { },
+          "type" : "org.apache.nifi.hbase.PutHBaseJSON",
+          "yieldDuration" : "1 sec"
+        }, {
+          "autoTerminatedRelationships" : [ "original", "failure" ],
+          "bulletinLevel" : "WARN",
+          "bundle" : {
+            "artifact" : "nifi-standard-nar",
+            "group" : "org.apache.nifi",
+            "version" : "1.9.2"
+          },
+          "comments" : "",
+          "componentType" : "PROCESSOR",
+          "concurrentlySchedulableTaskCount" : 1,
+          "executionNode" : "ALL",
+          "groupIdentifier" : "df6af272-a594-312d-9d8b-f3bc6504ba3c",
+          "identifier" : "0cdcb071-d5e4-3389-9023-272250c99d1a",
+          "name" : "Splits the json data.",
+          "penaltyDuration" : "30 sec",
+          "position" : {
+            "x" : 1379.943359375,
+            "y" : 846.647624151185
+          },
+          "properties" : {
+            "Null Value Representation" : "empty string",
+            "JsonPath Expression" : "$.[*]"
+          },
+          "propertyDescriptors" : {
+            "Null Value Representation" : {
+              "displayName" : "Null Value Representation",
+              "identifiesControllerService" : false,
+              "name" : "Null Value Representation",
+              "sensitive" : false
+            },
+            "JsonPath Expression" : {
+              "displayName" : "JsonPath Expression",
+              "identifiesControllerService" : false,
+              "name" : "JsonPath Expression",
+              "sensitive" : false
+            }
+          },
+          "runDurationMillis" : 0,
+          "schedulingPeriod" : "1 sec",
+          "schedulingStrategy" : "TIMER_DRIVEN",
+          "style" : { },
+          "type" : "org.apache.nifi.processors.standard.SplitJson",
+          "yieldDuration" : "1 sec"
+        } ],
+        "remoteProcessGroups" : [ ],
+        "variables" : { }
+      }
+    }
+  }
+}
