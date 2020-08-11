@@ -132,6 +132,17 @@
         }, {
           "componentType" : "LABEL",
           "groupIdentifier" : "35caac58-ae9e-32f8-b9e4-0eb23db3d93f",
+          "height" : 150.0,
+          "identifier" : "c93ad166-4840-3a02-9a9d-62acc6b149d0",
+          "position" : {
+            "x" : 1259.0,
+            "y" : 733.0
+          },
+          "style" : { },
+          "width" : 150.0
+        }, {
+          "componentType" : "LABEL",
+          "groupIdentifier" : "35caac58-ae9e-32f8-b9e4-0eb23db3d93f",
           "height" : 37.88085174560547,
           "identifier" : "da05474c-7b6a-315a-8701-8114213b0cce",
           "label" : "Rename the filename is done using\nthe \"UpdateAttribute\" processor",

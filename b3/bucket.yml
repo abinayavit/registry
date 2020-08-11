@@ -1,6 +1,13 @@
 flows:
-  20465296-72a3-4a78-ab5c-d6abcda28eba: {ver: 1, file: flow1.snapshot, comments: '',
-    author: anonymous, created: 1597143084550, flowName: flow1, flowDesc: ''}
+  20465296-72a3-4a78-ab5c-d6abcda28eba:
+    ver: 2
+    file: flow1.snapshot
+    comments: |
+      kk
+    author: anonymous
+    created: 1597143215311
+    flowName: flow1
+    flowDesc: ''
   fcf0a393-be4f-45ab-8a1d-60f26b42d597: {ver: 1, file: flow2.snapshot, comments: '',
     author: anonymous, created: 1597143127460, flowName: flow2, flowDesc: ''}
 layoutVer: 1
