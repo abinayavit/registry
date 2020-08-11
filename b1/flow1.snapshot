@@ -421,7 +421,15 @@
           },
           "type" : "org.apache.nifi.csv.CSVReader"
         } ],
-        "funnels" : [ ],
+        "funnels" : [ {
+          "componentType" : "FUNNEL",
+          "groupIdentifier" : "6cbf97b0-135f-339a-ad02-f6da9684b107",
+          "identifier" : "b5f4d76a-676e-32c1-8582-44e587f15f70",
+          "position" : {
+            "x" : 797.9945769826813,
+            "y" : 196.97021983640082
+          }
+        } ],
         "identifier" : "6cbf97b0-135f-339a-ad02-f6da9684b107",
         "inputPorts" : [ ],
         "labels" : [ {
