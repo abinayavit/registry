@@ -1,0 +1,957 @@
+{
+  "header" : {
+    "dataModelVersion" : "3"
+  },
+  "content" : {
+    "flowSnapshot" : {
+      "flowContents" : {
+        "comments" : "",
+        "componentType" : "PROCESS_GROUP",
+        "connections" : [ {
+          "backPressureDataSizeThreshold" : "0 MB",
+          "backPressureObjectThreshold" : 0,
+          "bends" : [ ],
+          "componentType" : "CONNECTION",
+          "destination" : {
+            "comments" : "",
+            "groupId" : "01c963c0-1cdd-3c00-b1fd-436dc697d085",
+            "id" : "c22a1b7d-74eb-310c-a38d-81dac2654cbc",
+            "name" : "Sets the file name for DOJ = 21/03/2004",
+            "type" : "PROCESSOR"
+          },
+          "flowFileExpiration" : "0 sec",
+          "groupIdentifier" : "01c963c0-1cdd-3c00-b1fd-436dc697d085",
+          "identifier" : "2d13b5d3-9180-370f-a7b1-639991e40ad8",
+          "labelIndex" : 1,
+          "loadBalanceCompression" : "DO_NOT_COMPRESS",
+          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+          "name" : "",
+          "prioritizers" : [ ],
+          "selectedRelationships" : [ "DateOfJoining" ],
+          "source" : {
+            "comments" : "",
+            "groupId" : "01c963c0-1cdd-3c00-b1fd-436dc697d085",
+            "id" : "1738d2c9-339d-3682-aaf4-dcbfe4aaf3d9",
+            "name" : "Filter the age, date of joining and name columns with condition.",
+            "type" : "PROCESSOR"
+          },
+          "zIndex" : 0
+        }, {
+          "backPressureDataSizeThreshold" : "0 MB",
+          "backPressureObjectThreshold" : 0,
+          "bends" : [ ],
+          "componentType" : "CONNECTION",
+          "destination" : {
+            "comments" : "Putfile Processor outputs the attribute Evaluation on the dataset from the column 7 to 9: \n\ncolumn 1 - S. No.\ncolumn 2 - Name\ncolumn 3 - Age\ncolumn 4 - EmailId\ncolumn 5 - Phone No.\ncolumn 6 - Date Of Joining\ncolumn 7 - EvaluatingAttributes(AllAttributes)-Search for value 'wei' in column 2 and 4 ,If the search value found in both the column its returns true or else false\ncolumn 8 - EvaluatingAttributes(AnyAttributes)-Search for value 'wei' in column 2 and 4 ,If found in any one of the column its returns true or else false\ncolumn 9 - EvaluatingAttributes(AnyDelineated)-Seperate the attribute value and search for the value 'cook',return true if the value is found or else return false\n",
+            "groupId" : "01c963c0-1cdd-3c00-b1fd-436dc697d085",
+            "id" : "39c4d7f2-5343-328f-8090-f7b9dcd39c0e",
+            "name" : "Store output files in local drive.",
+            "type" : "PROCESSOR"
+          },
+          "flowFileExpiration" : "0 sec",
+          "groupIdentifier" : "01c963c0-1cdd-3c00-b1fd-436dc697d085",
+          "identifier" : "7f9f6d67-3daf-3918-a40c-5f8e500cb709",
+          "labelIndex" : 1,
+          "loadBalanceCompression" : "DO_NOT_COMPRESS",
+          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+          "name" : "",
+          "prioritizers" : [ ],
+          "selectedRelationships" : [ "success" ],
+          "source" : {
+            "comments" : "",
+            "groupId" : "01c963c0-1cdd-3c00-b1fd-436dc697d085",
+            "id" : "7e06b9e8-afe7-3e09-85e4-4234dd95c793",
+            "name" : "Sets the file name for age &gt; 40",
+            "type" : "PROCESSOR"
+          },
+          "zIndex" : 0
+        }, {
+          "backPressureDataSizeThreshold" : "0 MB",
+          "backPressureObjectThreshold" : 0,
+          "bends" : [ ],
+          "componentType" : "CONNECTION",
+          "destination" : {
+            "comments" : "",
+            "groupId" : "01c963c0-1cdd-3c00-b1fd-436dc697d085",
+            "id" : "3f6bd6f6-dde9-3786-853f-ed314865a0cc",
+            "name" : "Extract text and stores data into 'inputdata' variable",
+            "type" : "PROCESSOR"
+          },
+          "flowFileExpiration" : "0 sec",
+          "groupIdentifier" : "01c963c0-1cdd-3c00-b1fd-436dc697d085",
+          "identifier" : "50f48ddb-d7d3-3362-8075-c10d9669eb5a",
+          "labelIndex" : 1,
+          "loadBalanceCompression" : "DO_NOT_COMPRESS",
+          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+          "name" : "",
+          "prioritizers" : [ ],
+          "selectedRelationships" : [ "splits" ],
+          "source" : {
+            "comments" : "",
+            "groupId" : "01c963c0-1cdd-3c00-b1fd-436dc697d085",
+            "id" : "640c623b-5263-3411-b2be-4591560f282e",
+            "name" : "Split text line by line.",
+            "type" : "PROCESSOR"
+          },
+          "zIndex" : 0
+        }, {
+          "backPressureDataSizeThreshold" : "0 MB",
+          "backPressureObjectThreshold" : 0,
+          "bends" : [ ],
+          "componentType" : "CONNECTION",
+          "destination" : {
+            "comments" : "Putfile Processor outputs the attribute Evaluation on the dataset from the column 7 to 9: \n\ncolumn 1 - S. No.\ncolumn 2 - Name\ncolumn 3 - Age\ncolumn 4 - EmailId\ncolumn 5 - Phone No.\ncolumn 6 - Date Of Joining\ncolumn 7 - EvaluatingAttributes(AllAttributes)-Search for value 'wei' in column 2 and 4 ,If the search value found in both the column its returns true or else false\ncolumn 8 - EvaluatingAttributes(AnyAttributes)-Search for value 'wei' in column 2 and 4 ,If found in any one of the column its returns true or else false\ncolumn 9 - EvaluatingAttributes(AnyDelineated)-Seperate the attribute value and search for the value 'cook',return true if the value is found or else return false\n",
+            "groupId" : "01c963c0-1cdd-3c00-b1fd-436dc697d085",
+            "id" : "39c4d7f2-5343-328f-8090-f7b9dcd39c0e",
+            "name" : "Store output files in local drive.",
+            "type" : "PROCESSOR"
+          },
+          "flowFileExpiration" : "0 sec",
+          "groupIdentifier" : "01c963c0-1cdd-3c00-b1fd-436dc697d085",
+          "identifier" : "f18c2a0b-057c-3de7-9709-1f5ecec0c187",
+          "labelIndex" : 1,
+          "loadBalanceCompression" : "DO_NOT_COMPRESS",
+          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+          "name" : "",
+          "prioritizers" : [ ],
+          "selectedRelationships" : [ "success" ],
+          "source" : {
+            "comments" : "",
+            "groupId" : "01c963c0-1cdd-3c00-b1fd-436dc697d085",
+            "id" : "c22a1b7d-74eb-310c-a38d-81dac2654cbc",
+            "name" : "Sets the file name for DOJ = 21/03/2004",
+            "type" : "PROCESSOR"
+          },
+          "zIndex" : 0
+        }, {
+          "backPressureDataSizeThreshold" : "0 MB",
+          "backPressureObjectThreshold" : 0,
+          "bends" : [ ],
+          "componentType" : "CONNECTION",
+          "destination" : {
+            "comments" : "",
+            "groupId" : "01c963c0-1cdd-3c00-b1fd-436dc697d085",
+            "id" : "1738d2c9-339d-3682-aaf4-dcbfe4aaf3d9",
+            "name" : "Filter the age, date of joining and name columns with condition.",
+            "type" : "PROCESSOR"
+          },
+          "flowFileExpiration" : "0 sec",
+          "groupIdentifier" : "01c963c0-1cdd-3c00-b1fd-436dc697d085",
+          "identifier" : "8861e5f1-f00d-3f29-b4e2-4d175d3b4699",
+          "labelIndex" : 1,
+          "loadBalanceCompression" : "DO_NOT_COMPRESS",
+          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+          "name" : "",
+          "prioritizers" : [ ],
+          "selectedRelationships" : [ "matched" ],
+          "source" : {
+            "comments" : "",
+            "groupId" : "01c963c0-1cdd-3c00-b1fd-436dc697d085",
+            "id" : "3f6bd6f6-dde9-3786-853f-ed314865a0cc",
+            "name" : "Extract text and stores data into 'inputdata' variable",
+            "type" : "PROCESSOR"
+          },
+          "zIndex" : 0
+        }, {
+          "backPressureDataSizeThreshold" : "0 MB",
+          "backPressureObjectThreshold" : 0,
+          "bends" : [ ],
+          "componentType" : "CONNECTION",
+          "destination" : {
+            "comments" : "",
+            "groupId" : "01c963c0-1cdd-3c00-b1fd-436dc697d085",
+            "id" : "acbeb48e-4a25-366c-a602-bebd144e202e",
+            "name" : "Sets the file name for name contains brooks.",
+            "type" : "PROCESSOR"
+          },
+          "flowFileExpiration" : "0 sec",
+          "groupIdentifier" : "01c963c0-1cdd-3c00-b1fd-436dc697d085",
+          "identifier" : "3f5e2689-fc78-35ca-b2dc-05a487da24ce",
+          "labelIndex" : 1,
+          "loadBalanceCompression" : "DO_NOT_COMPRESS",
+          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+          "name" : "",
+          "prioritizers" : [ ],
+          "selectedRelationships" : [ "Name" ],
+          "source" : {
+            "comments" : "",
+            "groupId" : "01c963c0-1cdd-3c00-b1fd-436dc697d085",
+            "id" : "1738d2c9-339d-3682-aaf4-dcbfe4aaf3d9",
+            "name" : "Filter the age, date of joining and name columns with condition.",
+            "type" : "PROCESSOR"
+          },
+          "zIndex" : 0
+        }, {
+          "backPressureDataSizeThreshold" : "0 MB",
+          "backPressureObjectThreshold" : 0,
+          "bends" : [ ],
+          "componentType" : "CONNECTION",
+          "destination" : {
+            "comments" : "",
+            "groupId" : "01c963c0-1cdd-3c00-b1fd-436dc697d085",
+            "id" : "640c623b-5263-3411-b2be-4591560f282e",
+            "name" : "Split text line by line.",
+            "type" : "PROCESSOR"
+          },
+          "flowFileExpiration" : "0 sec",
+          "groupIdentifier" : "01c963c0-1cdd-3c00-b1fd-436dc697d085",
+          "identifier" : "dd70ad29-794f-3fcf-ad43-00884992123f",
+          "labelIndex" : 1,
+          "loadBalanceCompression" : "DO_NOT_COMPRESS",
+          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+          "name" : "",
+          "prioritizers" : [ ],
+          "selectedRelationships" : [ "success" ],
+          "source" : {
+            "comments" : "",
+            "groupId" : "01c963c0-1cdd-3c00-b1fd-436dc697d085",
+            "id" : "d430ec4b-b7cf-36bc-ab93-3811d61aa71e",
+            "name" : "Read input csv file.",
+            "type" : "PROCESSOR"
+          },
+          "zIndex" : 0
+        }, {
+          "backPressureDataSizeThreshold" : "0 MB",
+          "backPressureObjectThreshold" : 0,
+          "bends" : [ ],
+          "componentType" : "CONNECTION",
+          "destination" : {
+            "comments" : "Putfile Processor outputs the attribute Evaluation on the dataset from the column 7 to 9: \n\ncolumn 1 - S. No.\ncolumn 2 - Name\ncolumn 3 - Age\ncolumn 4 - EmailId\ncolumn 5 - Phone No.\ncolumn 6 - Date Of Joining\ncolumn 7 - EvaluatingAttributes(AllAttributes)-Search for value 'wei' in column 2 and 4 ,If the search value found in both the column its returns true or else false\ncolumn 8 - EvaluatingAttributes(AnyAttributes)-Search for value 'wei' in column 2 and 4 ,If found in any one of the column its returns true or else false\ncolumn 9 - EvaluatingAttributes(AnyDelineated)-Seperate the attribute value and search for the value 'cook',return true if the value is found or else return false\n",
+            "groupId" : "01c963c0-1cdd-3c00-b1fd-436dc697d085",
+            "id" : "39c4d7f2-5343-328f-8090-f7b9dcd39c0e",
+            "name" : "Store output files in local drive.",
+            "type" : "PROCESSOR"
+          },
+          "flowFileExpiration" : "0 sec",
+          "groupIdentifier" : "01c963c0-1cdd-3c00-b1fd-436dc697d085",
+          "identifier" : "2ca9c4e8-a53b-3506-b6c3-07a0ee7e7633",
+          "labelIndex" : 1,
+          "loadBalanceCompression" : "DO_NOT_COMPRESS",
+          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+          "name" : "",
+          "prioritizers" : [ ],
+          "selectedRelationships" : [ "success" ],
+          "source" : {
+            "comments" : "",
+            "groupId" : "01c963c0-1cdd-3c00-b1fd-436dc697d085",
+            "id" : "acbeb48e-4a25-366c-a602-bebd144e202e",
+            "name" : "Sets the file name for name contains brooks.",
+            "type" : "PROCESSOR"
+          },
+          "zIndex" : 0
+        }, {
+          "backPressureDataSizeThreshold" : "0 MB",
+          "backPressureObjectThreshold" : 0,
+          "bends" : [ ],
+          "componentType" : "CONNECTION",
+          "destination" : {
+            "comments" : "",
+            "groupId" : "01c963c0-1cdd-3c00-b1fd-436dc697d085",
+            "id" : "7e06b9e8-afe7-3e09-85e4-4234dd95c793",
+            "name" : "Sets the file name for age &gt; 40",
+            "type" : "PROCESSOR"
+          },
+          "flowFileExpiration" : "0 sec",
+          "groupIdentifier" : "01c963c0-1cdd-3c00-b1fd-436dc697d085",
+          "identifier" : "5a8f62c1-f6c7-3c81-a5bc-951b0713ffab",
+          "labelIndex" : 1,
+          "loadBalanceCompression" : "DO_NOT_COMPRESS",
+          "loadBalanceStrategy" : "DO_NOT_LOAD_BALANCE",
+          "name" : "",
+          "prioritizers" : [ ],
+          "selectedRelationships" : [ "Age" ],
+          "source" : {
+            "comments" : "",
+            "groupId" : "01c963c0-1cdd-3c00-b1fd-436dc697d085",
+            "id" : "1738d2c9-339d-3682-aaf4-dcbfe4aaf3d9",
+            "name" : "Filter the age, date of joining and name columns with condition.",
+            "type" : "PROCESSOR"
+          },
+          "zIndex" : 0
+        } ],
+        "controllerServices" : [ ],
+        "funnels" : [ ],
+        "identifier" : "01c963c0-1cdd-3c00-b1fd-436dc697d085",
+        "inputPorts" : [ ],
+        "labels" : [ {
+          "componentType" : "LABEL",
+          "groupIdentifier" : "01c963c0-1cdd-3c00-b1fd-436dc697d085",
+          "height" : 24.096435546875,
+          "identifier" : "7c3389bb-afb9-3932-8c35-9b7517c37485",
+          "label" : "This sample demonstrates the use of processor to perform conditional operations.",
+          "position" : {
+            "x" : 996.4039495441439,
+            "y" : 770.0
+          },
+          "style" : {
+            "background-color" : "#ffffff",
+            "font-size" : "14px"
+          },
+          "width" : 572.3818969726562
+        }, {
+          "componentType" : "LABEL",
+          "groupIdentifier" : "01c963c0-1cdd-3c00-b1fd-436dc697d085",
+          "height" : 78.0,
+          "identifier" : "bb463f76-3a7b-3f93-993f-c63fa99adc5b",
+          "label" : "Conditional Operations are done using the \"RouteOnAttribute\" processor.\nWe have generated three csv output files based on the below conditions:\n\n1. Name.csv file contains the rows if 2nd column contains the name \"Brooks\"\n2. Age.csv file contains the rows if 3rd column contains the age greater than \"40\"\n3. DateOfJoining.csv contains the rows if 6th column contains the joining date \"3/21/2004\"\n",
+          "position" : {
+            "x" : 1031.708667561722,
+            "y" : 920.5649892425538
+          },
+          "style" : {
+            "background-color" : "#ffffff",
+            "font-size" : "12px"
+          },
+          "width" : 517.3818969726562
+        } ],
+        "name" : "Data Flow_3",
+        "outputPorts" : [ ],
+        "position" : {
+          "x" : 918.0,
+          "y" : 557.0
+        },
+        "processGroups" : [ ],
+        "processors" : [ {
+          "autoTerminatedRelationships" : [ ],
+          "bulletinLevel" : "WARN",
+          "bundle" : {
+            "artifact" : "nifi-standard-nar",
+            "group" : "org.apache.nifi",
+            "version" : "1.9.2"
+          },
+          "comments" : "",
+          "componentType" : "PROCESSOR",
+          "concurrentlySchedulableTaskCount" : 1,
+          "executionNode" : "ALL",
+          "groupIdentifier" : "01c963c0-1cdd-3c00-b1fd-436dc697d085",
+          "identifier" : "d430ec4b-b7cf-36bc-ab93-3811d61aa71e",
+          "name" : "Read input csv file.",
+          "penaltyDuration" : "30 sec",
+          "position" : {
+            "x" : 828.7795435190774,
+            "y" : 800.7181333851538
+          },
+          "properties" : {
+            "Keep Source File" : "true",
+            "Minimum File Age" : "0 sec",
+            "Polling Interval" : "0 sec",
+            "Input Directory" : "../../Samples/Data/AdventureWorks",
+            "Batch Size" : "10",
+            "Minimum File Size" : "0 B",
+            "Ignore Hidden Files" : "true",
+            "Recurse Subdirectories" : "true",
+            "File Filter" : "AdventureWorks_Person_Contact.csv"
+          },
+          "propertyDescriptors" : {
+            "Keep Source File" : {
+              "displayName" : "Keep Source File",
+              "identifiesControllerService" : false,
+              "name" : "Keep Source File",
+              "sensitive" : false
+            },
+            "Minimum File Age" : {
+              "displayName" : "Minimum File Age",
+              "identifiesControllerService" : false,
+              "name" : "Minimum File Age",
+              "sensitive" : false
+            },
+            "Polling Interval" : {
+              "displayName" : "Polling Interval",
+              "identifiesControllerService" : false,
+              "name" : "Polling Interval",
+              "sensitive" : false
+            },
+            "Input Directory" : {
+              "displayName" : "Input Directory",
+              "identifiesControllerService" : false,
+              "name" : "Input Directory",
+              "sensitive" : false
+            },
+            "Maximum File Age" : {
+              "displayName" : "Maximum File Age",
+              "identifiesControllerService" : false,
+              "name" : "Maximum File Age",
+              "sensitive" : false
+            },
+            "Batch Size" : {
+              "displayName" : "Batch Size",
+              "identifiesControllerService" : false,
+              "name" : "Batch Size",
+              "sensitive" : false
+            },
+            "Maximum File Size" : {
+              "displayName" : "Maximum File Size",
+              "identifiesControllerService" : false,
+              "name" : "Maximum File Size",
+              "sensitive" : false
+            },
+            "Minimum File Size" : {
+              "displayName" : "Minimum File Size",
+              "identifiesControllerService" : false,
+              "name" : "Minimum File Size",
+              "sensitive" : false
+            },
+            "Ignore Hidden Files" : {
+              "displayName" : "Ignore Hidden Files",
+              "identifiesControllerService" : false,
+              "name" : "Ignore Hidden Files",
+              "sensitive" : false
+            },
+            "Recurse Subdirectories" : {
+              "displayName" : "Recurse Subdirectories",
+              "identifiesControllerService" : false,
+              "name" : "Recurse Subdirectories",
+              "sensitive" : false
+            },
+            "File Filter" : {
+              "displayName" : "File Filter",
+              "identifiesControllerService" : false,
+              "name" : "File Filter",
+              "sensitive" : false
+            },
+            "Path Filter" : {
+              "displayName" : "Path Filter",
+              "identifiesControllerService" : false,
+              "name" : "Path Filter",
+              "sensitive" : false
+            }
+          },
+          "runDurationMillis" : 0,
+          "schedulingPeriod" : "1 day",
+          "schedulingStrategy" : "TIMER_DRIVEN",
+          "style" : { },
+          "type" : "org.apache.nifi.processors.standard.GetFile",
+          "yieldDuration" : "1 sec"
+        }, {
+          "autoTerminatedRelationships" : [ "original", "failure" ],
+          "bulletinLevel" : "WARN",
+          "bundle" : {
+            "artifact" : "nifi-standard-nar",
+            "group" : "org.apache.nifi",
+            "version" : "1.9.2"
+          },
+          "comments" : "",
+          "componentType" : "PROCESSOR",
+          "concurrentlySchedulableTaskCount" : 1,
+          "executionNode" : "ALL",
+          "groupIdentifier" : "01c963c0-1cdd-3c00-b1fd-436dc697d085",
+          "identifier" : "640c623b-5263-3411-b2be-4591560f282e",
+          "name" : "Split text line by line.",
+          "penaltyDuration" : "30 sec",
+          "position" : {
+            "x" : 828.0,
+            "y" : 927.7771795511385
+          },
+          "properties" : {
+            "Remove Trailing Newlines" : "true",
+            "Header Line Count" : "0",
+            "Line Split Count" : "1"
+          },
+          "propertyDescriptors" : {
+            "Remove Trailing Newlines" : {
+              "displayName" : "Remove Trailing Newlines",
+              "identifiesControllerService" : false,
+              "name" : "Remove Trailing Newlines",
+              "sensitive" : false
+            },
+            "Maximum Fragment Size" : {
+              "displayName" : "Maximum Fragment Size",
+              "identifiesControllerService" : false,
+              "name" : "Maximum Fragment Size",
+              "sensitive" : false
+            },
+            "Header Line Marker Characters" : {
+              "displayName" : "Header Line Marker Characters",
+              "identifiesControllerService" : false,
+              "name" : "Header Line Marker Characters",
+              "sensitive" : false
+            },
+            "Header Line Count" : {
+              "displayName" : "Header Line Count",
+              "identifiesControllerService" : false,
+              "name" : "Header Line Count",
+              "sensitive" : false
+            },
+            "Line Split Count" : {
+              "displayName" : "Line Split Count",
+              "identifiesControllerService" : false,
+              "name" : "Line Split Count",
+              "sensitive" : false
+            }
+          },
+          "runDurationMillis" : 0,
+          "schedulingPeriod" : "0 sec",
+          "schedulingStrategy" : "TIMER_DRIVEN",
+          "style" : { },
+          "type" : "org.apache.nifi.processors.standard.SplitText",
+          "yieldDuration" : "1 sec"
+        }, {
+          "autoTerminatedRelationships" : [ "unmatched" ],
+          "bulletinLevel" : "WARN",
+          "bundle" : {
+            "artifact" : "nifi-standard-nar",
+            "group" : "org.apache.nifi",
+            "version" : "1.9.2"
+          },
+          "comments" : "",
+          "componentType" : "PROCESSOR",
+          "concurrentlySchedulableTaskCount" : 1,
+          "executionNode" : "ALL",
+          "groupIdentifier" : "01c963c0-1cdd-3c00-b1fd-436dc697d085",
+          "identifier" : "1738d2c9-339d-3682-aaf4-dcbfe4aaf3d9",
+          "name" : "Filter the age, date of joining and name columns with condition.",
+          "penaltyDuration" : "30 sec",
+          "position" : {
+            "x" : 828.5195664101102,
+            "y" : 1165.4956880950926
+          },
+          "properties" : {
+            "Routing Strategy" : "Route to Property name",
+            "DateOfJoining" : "${inputdata:getDelimitedField(6):toDate(\"MM/dd/yyyy HH:mm:ss\"):format(\"dd/MM/yyyy\"):equals('21/03/2004')}",
+            "Age" : "${inputdata:getDelimitedField(3):gt(40)}",
+            "Name" : "${inputdata:getDelimitedField(2):contains('Brooks')}"
+          },
+          "propertyDescriptors" : {
+            "Routing Strategy" : {
+              "displayName" : "Routing Strategy",
+              "identifiesControllerService" : false,
+              "name" : "Routing Strategy",
+              "sensitive" : false
+            },
+            "DateOfJoining" : {
+              "displayName" : "DateOfJoining",
+              "identifiesControllerService" : false,
+              "name" : "DateOfJoining",
+              "sensitive" : false
+            },
+            "Age" : {
+              "displayName" : "Age",
+              "identifiesControllerService" : false,
+              "name" : "Age",
+              "sensitive" : false
+            },
+            "Name" : {
+              "displayName" : "Name",
+              "identifiesControllerService" : false,
+              "name" : "Name",
+              "sensitive" : false
+            }
+          },
+          "runDurationMillis" : 0,
+          "schedulingPeriod" : "0 sec",
+          "schedulingStrategy" : "TIMER_DRIVEN",
+          "style" : { },
+          "type" : "org.apache.nifi.processors.standard.RouteOnAttribute",
+          "yieldDuration" : "1 sec"
+        }, {
+          "autoTerminatedRelationships" : [ "success", "failure" ],
+          "bulletinLevel" : "WARN",
+          "bundle" : {
+            "artifact" : "nifi-standard-nar",
+            "group" : "org.apache.nifi",
+            "version" : "1.9.2"
+          },
+          "comments" : "Putfile Processor outputs the attribute Evaluation on the dataset from the column 7 to 9: \n\ncolumn 1 - S. No.\ncolumn 2 - Name\ncolumn 3 - Age\ncolumn 4 - EmailId\ncolumn 5 - Phone No.\ncolumn 6 - Date Of Joining\ncolumn 7 - EvaluatingAttributes(AllAttributes)-Search for value 'wei' in column 2 and 4 ,If the search value found in both the column its returns true or else false\ncolumn 8 - EvaluatingAttributes(AnyAttributes)-Search for value 'wei' in column 2 and 4 ,If found in any one of the column its returns true or else false\ncolumn 9 - EvaluatingAttributes(AnyDelineated)-Seperate the attribute value and search for the value 'cook',return true if the value is found or else return false\n",
+          "componentType" : "PROCESSOR",
+          "concurrentlySchedulableTaskCount" : 1,
+          "executionNode" : "ALL",
+          "groupIdentifier" : "01c963c0-1cdd-3c00-b1fd-436dc697d085",
+          "identifier" : "39c4d7f2-5343-328f-8090-f7b9dcd39c0e",
+          "name" : "Store output files in local drive.",
+          "penaltyDuration" : "30 sec",
+          "position" : {
+            "x" : 1561.5364808435315,
+            "y" : 1151.839192389943
+          },
+          "properties" : {
+            "Create Missing Directories" : "true",
+            "Directory" : "../../Samples/Output/ConditionalOperationsOutput",
+            "Conflict Resolution Strategy" : "append"
+          },
+          "propertyDescriptors" : {
+            "Group" : {
+              "displayName" : "Group",
+              "identifiesControllerService" : false,
+              "name" : "Group",
+              "sensitive" : false
+            },
+            "Owner" : {
+              "displayName" : "Owner",
+              "identifiesControllerService" : false,
+              "name" : "Owner",
+              "sensitive" : false
+            },
+            "Create Missing Directories" : {
+              "displayName" : "Create Missing Directories",
+              "identifiesControllerService" : false,
+              "name" : "Create Missing Directories",
+              "sensitive" : false
+            },
+            "Permissions" : {
+              "displayName" : "Permissions",
+              "identifiesControllerService" : false,
+              "name" : "Permissions",
+              "sensitive" : false
+            },
+            "Maximum File Count" : {
+              "displayName" : "Maximum File Count",
+              "identifiesControllerService" : false,
+              "name" : "Maximum File Count",
+              "sensitive" : false
+            },
+            "Last Modified Time" : {
+              "displayName" : "Last Modified Time",
+              "identifiesControllerService" : false,
+              "name" : "Last Modified Time",
+              "sensitive" : false
+            },
+            "Directory" : {
+              "displayName" : "Directory",
+              "identifiesControllerService" : false,
+              "name" : "Directory",
+              "sensitive" : false
+            },
+            "Conflict Resolution Strategy" : {
+              "displayName" : "Conflict Resolution Strategy",
+              "identifiesControllerService" : false,
+              "name" : "Conflict Resolution Strategy",
+              "sensitive" : false
+            }
+          },
+          "runDurationMillis" : 0,
+          "schedulingPeriod" : "0 sec",
+          "schedulingStrategy" : "TIMER_DRIVEN",
+          "style" : { },
+          "type" : "org.apache.nifi.processors.standard.PutFile",
+          "yieldDuration" : "1 sec"
+        }, {
+          "autoTerminatedRelationships" : [ "unmatched" ],
+          "bulletinLevel" : "WARN",
+          "bundle" : {
+            "artifact" : "nifi-standard-nar",
+            "group" : "org.apache.nifi",
+            "version" : "1.9.2"
+          },
+          "comments" : "",
+          "componentType" : "PROCESSOR",
+          "concurrentlySchedulableTaskCount" : 1,
+          "executionNode" : "ALL",
+          "groupIdentifier" : "01c963c0-1cdd-3c00-b1fd-436dc697d085",
+          "identifier" : "3f6bd6f6-dde9-3786-853f-ed314865a0cc",
+          "name" : "Extract text and stores data into 'inputdata' variable",
+          "penaltyDuration" : "30 sec",
+          "position" : {
+            "x" : 830.2124832802274,
+            "y" : 1047.8929806271922
+          },
+          "properties" : {
+            "Enable Unicode Predefined Character Classes" : "false",
+            "Permit Whitespace and Comments in Pattern" : "false",
+            "Enable Unicode-aware Case Folding" : "false",
+            "Enable DOTALL Mode" : "false",
+            "Enable Unix Lines Mode" : "false",
+            "Maximum Buffer Size" : "1 MB",
+            "Enable Canonical Equivalence" : "false",
+            "Enable Case-insensitive Matching" : "false",
+            "inputdata" : "(.*)",
+            "Enable Multiline Mode" : "false",
+            "Maximum Capture Group Length" : "1024",
+            "Enable Literal Parsing of the Pattern" : "false",
+            "Character Set" : "UTF-8",
+            "Include Capture Group 0" : "false",
+            "extract-text-enable-repeating-capture-group" : "false"
+          },
+          "propertyDescriptors" : {
+            "Enable Unicode Predefined Character Classes" : {
+              "displayName" : "Enable Unicode Predefined Character Classes",
+              "identifiesControllerService" : false,
+              "name" : "Enable Unicode Predefined Character Classes",
+              "sensitive" : false
+            },
+            "Permit Whitespace and Comments in Pattern" : {
+              "displayName" : "Permit Whitespace and Comments in Pattern",
+              "identifiesControllerService" : false,
+              "name" : "Permit Whitespace and Comments in Pattern",
+              "sensitive" : false
+            },
+            "Enable Unicode-aware Case Folding" : {
+              "displayName" : "Enable Unicode-aware Case Folding",
+              "identifiesControllerService" : false,
+              "name" : "Enable Unicode-aware Case Folding",
+              "sensitive" : false
+            },
+            "Enable DOTALL Mode" : {
+              "displayName" : "Enable DOTALL Mode",
+              "identifiesControllerService" : false,
+              "name" : "Enable DOTALL Mode",
+              "sensitive" : false
+            },
+            "Enable Unix Lines Mode" : {
+              "displayName" : "Enable Unix Lines Mode",
+              "identifiesControllerService" : false,
+              "name" : "Enable Unix Lines Mode",
+              "sensitive" : false
+            },
+            "Maximum Buffer Size" : {
+              "displayName" : "Maximum Buffer Size",
+              "identifiesControllerService" : false,
+              "name" : "Maximum Buffer Size",
+              "sensitive" : false
+            },
+            "Enable Canonical Equivalence" : {
+              "displayName" : "Enable Canonical Equivalence",
+              "identifiesControllerService" : false,
+              "name" : "Enable Canonical Equivalence",
+              "sensitive" : false
+            },
+            "Enable Case-insensitive Matching" : {
+              "displayName" : "Enable Case-insensitive Matching",
+              "identifiesControllerService" : false,
+              "name" : "Enable Case-insensitive Matching",
+              "sensitive" : false
+            },
+            "inputdata" : {
+              "displayName" : "inputdata",
+              "identifiesControllerService" : false,
+              "name" : "inputdata",
+              "sensitive" : false
+            },
+            "Enable Multiline Mode" : {
+              "displayName" : "Enable Multiline Mode",
+              "identifiesControllerService" : false,
+              "name" : "Enable Multiline Mode",
+              "sensitive" : false
+            },
+            "Maximum Capture Group Length" : {
+              "displayName" : "Maximum Capture Group Length",
+              "identifiesControllerService" : false,
+              "name" : "Maximum Capture Group Length",
+              "sensitive" : false
+            },
+            "Enable Literal Parsing of the Pattern" : {
+              "displayName" : "Enable Literal Parsing of the Pattern",
+              "identifiesControllerService" : false,
+              "name" : "Enable Literal Parsing of the Pattern",
+              "sensitive" : false
+            },
+            "Character Set" : {
+              "displayName" : "Character Set",
+              "identifiesControllerService" : false,
+              "name" : "Character Set",
+              "sensitive" : false
+            },
+            "Include Capture Group 0" : {
+              "displayName" : "Include Capture Group 0",
+              "identifiesControllerService" : false,
+              "name" : "Include Capture Group 0",
+              "sensitive" : false
+            },
+            "extract-text-enable-repeating-capture-group" : {
+              "displayName" : "Enable repeating capture group",
+              "identifiesControllerService" : false,
+              "name" : "extract-text-enable-repeating-capture-group",
+              "sensitive" : false
+            }
+          },
+          "runDurationMillis" : 0,
+          "schedulingPeriod" : "0 sec",
+          "schedulingStrategy" : "TIMER_DRIVEN",
+          "style" : { },
+          "type" : "org.apache.nifi.processors.standard.ExtractText",
+          "yieldDuration" : "1 sec"
+        }, {
+          "autoTerminatedRelationships" : [ ],
+          "bulletinLevel" : "WARN",
+          "bundle" : {
+            "artifact" : "nifi-update-attribute-nar",
+            "group" : "org.apache.nifi",
+            "version" : "1.9.2"
+          },
+          "comments" : "",
+          "componentType" : "PROCESSOR",
+          "concurrentlySchedulableTaskCount" : 1,
+          "executionNode" : "ALL",
+          "groupIdentifier" : "01c963c0-1cdd-3c00-b1fd-436dc697d085",
+          "identifier" : "7e06b9e8-afe7-3e09-85e4-4234dd95c793",
+          "name" : "Sets the file name for age &gt; 40",
+          "penaltyDuration" : "30 sec",
+          "position" : {
+            "x" : 1197.2408798866727,
+            "y" : 1165.096707382202
+          },
+          "properties" : {
+            "filename" : "Age.csv",
+            "Store State" : "Do not store state",
+            "canonical-value-lookup-cache-size" : "100"
+          },
+          "propertyDescriptors" : {
+            "Delete Attributes Expression" : {
+              "displayName" : "Delete Attributes Expression",
+              "identifiesControllerService" : false,
+              "name" : "Delete Attributes Expression",
+              "sensitive" : false
+            },
+            "filename" : {
+              "displayName" : "filename",
+              "identifiesControllerService" : false,
+              "name" : "filename",
+              "sensitive" : false
+            },
+            "Store State" : {
+              "displayName" : "Store State",
+              "identifiesControllerService" : false,
+              "name" : "Store State",
+              "sensitive" : false
+            },
+            "canonical-value-lookup-cache-size" : {
+              "displayName" : "Cache Value Lookup Cache Size",
+              "identifiesControllerService" : false,
+              "name" : "canonical-value-lookup-cache-size",
+              "sensitive" : false
+            },
+            "Stateful Variables Initial Value" : {
+              "displayName" : "Stateful Variables Initial Value",
+              "identifiesControllerService" : false,
+              "name" : "Stateful Variables Initial Value",
+              "sensitive" : false
+            }
+          },
+          "runDurationMillis" : 0,
+          "schedulingPeriod" : "0 sec",
+          "schedulingStrategy" : "TIMER_DRIVEN",
+          "style" : { },
+          "type" : "org.apache.nifi.processors.attributes.UpdateAttribute",
+          "yieldDuration" : "1 sec"
+        }, {
+          "autoTerminatedRelationships" : [ ],
+          "bulletinLevel" : "WARN",
+          "bundle" : {
+            "artifact" : "nifi-update-attribute-nar",
+            "group" : "org.apache.nifi",
+            "version" : "1.9.2"
+          },
+          "comments" : "",
+          "componentType" : "PROCESSOR",
+          "concurrentlySchedulableTaskCount" : 1,
+          "executionNode" : "ALL",
+          "groupIdentifier" : "01c963c0-1cdd-3c00-b1fd-436dc697d085",
+          "identifier" : "acbeb48e-4a25-366c-a602-bebd144e202e",
+          "name" : "Sets the file name for name contains brooks.",
+          "penaltyDuration" : "30 sec",
+          "position" : {
+            "x" : 1199.054417484329,
+            "y" : 1053.631192855835
+          },
+          "properties" : {
+            "filename" : "Name.csv",
+            "Store State" : "Do not store state",
+            "canonical-value-lookup-cache-size" : "100"
+          },
+          "propertyDescriptors" : {
+            "Delete Attributes Expression" : {
+              "displayName" : "Delete Attributes Expression",
+              "identifiesControllerService" : false,
+              "name" : "Delete Attributes Expression",
+              "sensitive" : false
+            },
+            "filename" : {
+              "displayName" : "filename",
+              "identifiesControllerService" : false,
+              "name" : "filename",
+              "sensitive" : false
+            },
+            "Store State" : {
+              "displayName" : "Store State",
+              "identifiesControllerService" : false,
+              "name" : "Store State",
+              "sensitive" : false
+            },
+            "canonical-value-lookup-cache-size" : {
+              "displayName" : "Cache Value Lookup Cache Size",
+              "identifiesControllerService" : false,
+              "name" : "canonical-value-lookup-cache-size",
+              "sensitive" : false
+            },
+            "Stateful Variables Initial Value" : {
+              "displayName" : "Stateful Variables Initial Value",
+              "identifiesControllerService" : false,
+              "name" : "Stateful Variables Initial Value",
+              "sensitive" : false
+            }
+          },
+          "runDurationMillis" : 0,
+          "schedulingPeriod" : "0 sec",
+          "schedulingStrategy" : "TIMER_DRIVEN",
+          "style" : { },
+          "type" : "org.apache.nifi.processors.attributes.UpdateAttribute",
+          "yieldDuration" : "1 sec"
+        }, {
+          "autoTerminatedRelationships" : [ ],
+          "bulletinLevel" : "WARN",
+          "bundle" : {
+            "artifact" : "nifi-update-attribute-nar",
+            "group" : "org.apache.nifi",
+            "version" : "1.9.2"
+          },
+          "comments" : "",
+          "componentType" : "PROCESSOR",
+          "concurrentlySchedulableTaskCount" : 1,
+          "executionNode" : "ALL",
+          "groupIdentifier" : "01c963c0-1cdd-3c00-b1fd-436dc697d085",
+          "identifier" : "c22a1b7d-74eb-310c-a38d-81dac2654cbc",
+          "name" : "Sets the file name for DOJ = 21/03/2004",
+          "penaltyDuration" : "30 sec",
+          "position" : {
+            "x" : 1194.353489749954,
+            "y" : 1266.5228743743896
+          },
+          "properties" : {
+            "filename" : "DateOfJoining.csv",
+            "Store State" : "Do not store state",
+            "canonical-value-lookup-cache-size" : "100"
+          },
+          "propertyDescriptors" : {
+            "Delete Attributes Expression" : {
+              "displayName" : "Delete Attributes Expression",
+              "identifiesControllerService" : false,
+              "name" : "Delete Attributes Expression",
+              "sensitive" : false
+            },
+            "filename" : {
+              "displayName" : "filename",
+              "identifiesControllerService" : false,
+              "name" : "filename",
+              "sensitive" : false
+            },
+            "Store State" : {
+              "displayName" : "Store State",
+              "identifiesControllerService" : false,
+              "name" : "Store State",
+              "sensitive" : false
+            },
+            "canonical-value-lookup-cache-size" : {
+              "displayName" : "Cache Value Lookup Cache Size",
+              "identifiesControllerService" : false,
+              "name" : "canonical-value-lookup-cache-size",
+              "sensitive" : false
+            },
+            "Stateful Variables Initial Value" : {
+              "displayName" : "Stateful Variables Initial Value",
+              "identifiesControllerService" : false,
+              "name" : "Stateful Variables Initial Value",
+              "sensitive" : false
+            }
+          },
+          "runDurationMillis" : 0,
+          "schedulingPeriod" : "0 sec",
+          "schedulingStrategy" : "TIMER_DRIVEN",
+          "style" : { },
+          "type" : "org.apache.nifi.processors.attributes.UpdateAttribute",
+          "yieldDuration" : "1 sec"
+        } ],
+        "remoteProcessGroups" : [ ],
+        "variables" : { }
+      }
+    }
+  }
+}
