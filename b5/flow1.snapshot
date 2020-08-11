@@ -131,6 +131,17 @@
         "labels" : [ {
           "componentType" : "LABEL",
           "groupIdentifier" : "e3ad61f3-09ec-30e1-b861-9d38c240c0f9",
+          "height" : 150.0,
+          "identifier" : "d78118a1-6bcb-37b4-be9b-85d5688b4173",
+          "position" : {
+            "x" : 1879.0,
+            "y" : 1060.0
+          },
+          "style" : { },
+          "width" : 150.0
+        }, {
+          "componentType" : "LABEL",
+          "groupIdentifier" : "e3ad61f3-09ec-30e1-b861-9d38c240c0f9",
           "height" : 178.2611083984375,
           "identifier" : "5c3513f9-714a-3478-aa9c-42c6f67b07cf",
           "label" : "Boolean Operations are done using the \"Replace Text\" processor.\nWe have added new columns additionally with each demonstrating one operation as an example \n\nColumn 7 - contains true if the 2nd column is not equal to \"Max Benson\", else contains false\nColumn 8 - contains true if the 3rd column is less than \"30\", else contains false\nColumn 9 - contains true if the 2nd column is equal to \"David Bartness\" or 3rd column is greater than or equal to 30, else contains false\nColumn 10 - contains true if the 2nd column is equal to \"John Bennetts\" and 3rd column is equal to \"john9@adventure-works.com\", else contains false\nColumn 11 - contains true if the 2nd column is equal to \"Jon Morris\", else contains false\nColumn 12 - contains true if the 3rd column is less than or equal to \"40\", else contains false\nColumn 13 - contains true if the 3rd column is greater than or equal to \"25\", else contains false\nColumn 14 - contains true if the 3rd column is greater than \"20\", else contains false\nColumn 15 - contains true if the 2nd column is equal to \"gerald0@adventure-works.com\" if it differ only by case (upper case vs. lower case), else contains false\nColumn 16 - contains true if the 5rd column is not null, else contains false",
@@ -162,8 +173,8 @@
         "name" : "Data Flow_2",
         "outputPorts" : [ ],
         "position" : {
-          "x" : 1896.0,
-          "y" : 1062.0
+          "x" : 1862.0,
+          "y" : 1007.0
         },
         "processGroups" : [ ],
         "processors" : [ {
