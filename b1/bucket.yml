@@ -5,5 +5,7 @@ flows:
     author: anonymous, created: 1597136015943, flowName: flow2, flowDesc: ''}
   ad8998f1-83fc-48cb-8c19-707d45b62f1d: {ver: 2, file: flow3.snapshot, comments: lkjkjjk,
     author: anonymous, created: 1597141706866, flowName: flow3, flowDesc: ''}
+  036f256b-33d9-4138-bbda-064e257836cb: {ver: 1, file: flow4.snapshot, comments: '',
+    author: anonymous, created: 1597142503093, flowName: flow4, flowDesc: ''}
 layoutVer: 1
 bucketId: f8e5edc5-df14-404b-9375-0dc9d7becf0c
