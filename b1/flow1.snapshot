@@ -569,6 +569,105 @@
           "type" : "org.apache.nifi.processors.attributes.UpdateAttribute",
           "yieldDuration" : "1 sec"
         }, {
+          "autoTerminatedRelationships" : [ ],
+          "bulletinLevel" : "WARN",
+          "bundle" : {
+            "artifact" : "nifi-aws-nar",
+            "group" : "org.apache.nifi",
+            "version" : "1.9.2"
+          },
+          "comments" : "",
+          "componentType" : "PROCESSOR",
+          "concurrentlySchedulableTaskCount" : 1,
+          "executionNode" : "ALL",
+          "groupIdentifier" : "6cbf97b0-135f-339a-ad02-f6da9684b107",
+          "identifier" : "6b7f2c5f-c98e-388e-a6e4-47caf9d4c52d",
+          "name" : "DeleteSQS",
+          "penaltyDuration" : "30 sec",
+          "position" : {
+            "x" : 675.5322065918967,
+            "y" : 414.7926327445999
+          },
+          "properties" : {
+            "Receipt Handle" : "${sqs.receipt.handle}",
+            "Communications Timeout" : "30 secs",
+            "Region" : "us-west-2"
+          },
+          "propertyDescriptors" : {
+            "Receipt Handle" : {
+              "displayName" : "Receipt Handle",
+              "identifiesControllerService" : false,
+              "name" : "Receipt Handle",
+              "sensitive" : false
+            },
+            "Proxy Host" : {
+              "displayName" : "Proxy Host",
+              "identifiesControllerService" : false,
+              "name" : "Proxy Host",
+              "sensitive" : false
+            },
+            "Access Key" : {
+              "displayName" : "Access Key ID",
+              "identifiesControllerService" : false,
+              "name" : "Access Key",
+              "sensitive" : false
+            },
+            "Communications Timeout" : {
+              "displayName" : "Communications Timeout",
+              "identifiesControllerService" : false,
+              "name" : "Communications Timeout",
+              "sensitive" : false
+            },
+            "Secret Key" : {
+              "displayName" : "Secret Access Key",
+              "identifiesControllerService" : false,
+              "name" : "Secret Key",
+              "sensitive" : false
+            },
+            "Credentials File" : {
+              "displayName" : "Credentials File",
+              "identifiesControllerService" : false,
+              "name" : "Credentials File",
+              "sensitive" : false
+            },
+            "Region" : {
+              "displayName" : "Region",
+              "identifiesControllerService" : false,
+              "name" : "Region",
+              "sensitive" : false
+            },
+            "Endpoint Override URL" : {
+              "displayName" : "Endpoint Override URL",
+              "identifiesControllerService" : false,
+              "name" : "Endpoint Override URL",
+              "sensitive" : false
+            },
+            "Queue URL" : {
+              "displayName" : "Queue URL",
+              "identifiesControllerService" : false,
+              "name" : "Queue URL",
+              "sensitive" : false
+            },
+            "Proxy Host Port" : {
+              "displayName" : "Proxy Host Port",
+              "identifiesControllerService" : false,
+              "name" : "Proxy Host Port",
+              "sensitive" : false
+            },
+            "AWS Credentials Provider service" : {
+              "displayName" : "AWS Credentials Provider service",
+              "identifiesControllerService" : true,
+              "name" : "AWS Credentials Provider service",
+              "sensitive" : false
+            }
+          },
+          "runDurationMillis" : 0,
+          "schedulingPeriod" : "0 sec",
+          "schedulingStrategy" : "TIMER_DRIVEN",
+          "style" : { },
+          "type" : "org.apache.nifi.processors.aws.sqs.DeleteSQS",
+          "yieldDuration" : "1 sec"
+        }, {
           "autoTerminatedRelationships" : [ "failure" ],
           "bulletinLevel" : "WARN",
           "bundle" : {
