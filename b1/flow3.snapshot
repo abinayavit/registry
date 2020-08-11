@@ -270,7 +270,15 @@
           "zIndex" : 0
         } ],
         "controllerServices" : [ ],
-        "funnels" : [ ],
+        "funnels" : [ {
+          "componentType" : "FUNNEL",
+          "groupIdentifier" : "01c963c0-1cdd-3c00-b1fd-436dc697d085",
+          "identifier" : "99cb4974-532d-3ecf-b175-aa4cc60a5963",
+          "position" : {
+            "x" : 876.0,
+            "y" : 658.0
+          }
+        } ],
         "identifier" : "01c963c0-1cdd-3c00-b1fd-436dc697d085",
         "inputPorts" : [ ],
         "labels" : [ {
