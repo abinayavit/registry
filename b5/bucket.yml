@@ -1,4 +1,6 @@
 flows:
+  18edf501-2b8c-4d98-a3a0-aaf4d1fd00c8: {ver: 1, file: flow2.snapshot, comments: '',
+    author: anonymous, created: 1597147019225, flowName: flow2, flowDesc: ''}
   c02e94bc-d927-4798-95db-b166d34404a9: {ver: 2, file: flow1.snapshot, comments: k;ljkfhgkj,
     author: anonymous, created: 1597146867294, flowName: flow1, flowDesc: ''}
 layoutVer: 1
