@@ -449,6 +449,17 @@
         }, {
           "componentType" : "LABEL",
           "groupIdentifier" : "6cbf97b0-135f-339a-ad02-f6da9684b107",
+          "height" : 150.0,
+          "identifier" : "855f6230-cace-33ff-95d7-b050e81344f1",
+          "position" : {
+            "x" : 857.2181823356018,
+            "y" : 246.1559259769619
+          },
+          "style" : { },
+          "width" : 150.0
+        }, {
+          "componentType" : "LABEL",
+          "groupIdentifier" : "6cbf97b0-135f-339a-ad02-f6da9684b107",
           "height" : 26.563276290893555,
           "identifier" : "72f2d23e-a57a-314f-852a-a0408f026600",
           "label" : "This sample demonstrates the use of processor to convert csv file into json format.",
